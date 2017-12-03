@@ -1,0 +1,19 @@
+{
+    "name": "tommylee/php_compatibility_checker",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Tommy Lee",
+            "email": "tommy.lee@frshlns.com"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.2 || ^3.0.2",
+        "wimg/php-compatibility": "*"
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wimg/php-compatibility",
+        "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wimg/php-compatibility"
+    },
+    "prefer-stable" : true
+}
